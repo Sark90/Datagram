@@ -5,16 +5,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-       int in=999, out=1001, serv=998;
+       int inPort=999, outPort=1001, servPort=998;
        if (args.length == 0) {
-           in = 1001;
-           out = 999;
-           serv = 1000;
+           inPort = 1001;
+           outPort = 999;
+           servPort = 1000;
        }
-      /* System.out.println("in: " + in);
-       System.out.println("out: " + out);*/
-       Datagrams server = Datagrams.getInstance(Modes.Server, serv, out);
-       Datagrams client = Datagrams.getInstance(Modes.Client, serv, in);
+      /* System.outPort.println("inPort: " + inPort);
+       System.outPort.println("outPort: " + outPort);*/
+       Datagrams server = Datagrams.getInstance(Modes.Server, servPort, outPort);
+       Datagrams client = Datagrams.getInstance(Modes.Client, servPort, inPort);
         try {
             server.join();
             client.join();
